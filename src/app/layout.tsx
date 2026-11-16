@@ -27,13 +27,6 @@ export const metadata: Metadata = {
     template: "%s | Vee's Luxe Foundry",
   },
   description: siteConfig.description,
-  icons: {
-    icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/brand/logo-mark.svg", type: "image/svg+xml" },
-    ],
-    apple: "/apple-touch-icon.png",
-  },
   metadataBase: new URL(siteConfig.url),
   openGraph: {
     type: "website",

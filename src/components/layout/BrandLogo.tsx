@@ -9,11 +9,11 @@ export function BrandLogo({ className = "" }: BrandLogoProps) {
   return (
     <Link href="/" className={`inline-flex items-center gap-3 group ${className}`}>
       <Image
-        src="/brand/logo-mark.svg"
+        src="/brand/logo-bright.png"
         alt=""
-        width={44}
-        height={44}
-        className="w-9 h-9 sm:w-10 sm:h-10 drop-shadow-[0_0_12px_rgba(245,208,97,0.35)]"
+        width={48}
+        height={48}
+        className="w-10 h-10 sm:w-11 sm:h-11 object-contain contrast-[1.12] saturate-[1.15] drop-shadow-[0_1px_2px_rgba(42,24,16,0.25)] drop-shadow-[0_0_14px_rgba(245,195,55,0.45)]"
         priority
       />
       <span className="flex flex-col leading-tight">

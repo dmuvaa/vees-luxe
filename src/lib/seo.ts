@@ -57,7 +57,7 @@ export function generateOrganizationJsonLd(siteUrl = siteConfig.url) {
     "@type": "Organization",
     name: siteConfig.name,
     url: siteUrl,
-    logo: `${siteUrl}/logo.png`,
+    logo: `${siteUrl}/brand/icon-512.png`,
     description: siteConfig.description,
     sameAs: [siteConfig.instagram],
     contactPoint: {
@@ -75,7 +75,7 @@ export function generateLocalBusinessJsonLd(siteUrl = siteConfig.url) {
     "@context": "https://schema.org",
     "@type": "Store",
     name: siteConfig.name,
-    image: `${siteUrl}/logo.png`,
+    image: `${siteUrl}/brand/icon-512.png`,
     url: siteUrl,
     telephone: `+${siteConfig.whatsappNumber}`,
     priceRange: "KES 3,200 - KES 5,000",

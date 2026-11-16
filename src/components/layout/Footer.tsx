@@ -15,7 +15,13 @@ export function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="inline-flex items-center gap-3">
-              <Image src="/brand/logo-mark.svg" alt="" width={40} height={40} className="w-10 h-10" />
+              <Image
+                src="/brand/logo-bright.png"
+                alt=""
+                width={44}
+                height={44}
+                className="w-11 h-11 object-contain contrast-[1.12] saturate-[1.15] drop-shadow-[0_0_10px_rgba(245,195,55,0.35)]"
+              />
               <span>
                 <span className="font-serif text-xl tracking-wider text-[#F8F4ED] uppercase block">
                   Vee&apos;s Luxe
