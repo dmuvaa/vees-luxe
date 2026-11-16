@@ -65,34 +65,8 @@ export function HeroShowcase({ slides }: HeroShowcaseProps) {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-[3.75rem]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-9 lg:gap-9 items-center">
-          {/* Copy */}
-          <div className="lg:col-span-5 space-y-6 order-2 lg:order-1">
-            <p className="ui-eyebrow text-muted text-[0.75rem] tracking-[0.18em]">
-              Vee&apos;s Luxe Foundry · Nairobi
-            </p>
-
-            <div className="space-y-4">
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.8125rem] text-ink font-medium leading-tight tracking-tight">
-                {siteConfig.homeHero.headline}
-              </h1>
-              <p className="text-base text-muted leading-relaxed max-w-lg">
-                {siteConfig.homeHero.intro}
-              </p>
-              <p className="text-sm sm:text-base text-body/90 leading-snug max-w-lg border-l-2 border-gold/50 pl-4">
-                {siteConfig.tagline}
-              </p>
-            </div>
-
-            <Link
-              href="/shop"
-              className="ui-btn bg-bottle-green text-ivory hover:bg-bottle-green-hover shadow-sm"
-            >
-              Shop the collection
-            </Link>
-          </div>
-
-          {/* Product visual */}
-          <div className="lg:col-span-7 order-1 lg:order-2 relative flex items-center justify-center min-h-[300px] sm:min-h-[390px] lg:min-h-[450px]">
+          {/* Product visual — first in DOM so mobile shows imagery before copy */}
+          <div className="lg:col-span-7 lg:order-2 relative flex items-center justify-center min-h-[300px] sm:min-h-[390px] lg:min-h-[450px]">
             <div className="relative w-full max-w-[420px] sm:max-w-md lg:max-w-xl mx-auto h-[min(57vh,480px)] sm:h-[min(63vh,510px)] lg:h-[450px] flex items-center justify-center">
               {slides.map((slide, i) => (
                 <div
@@ -134,6 +108,32 @@ export function HeroShowcase({ slides }: HeroShowcaseProps) {
                 </button>
               </>
             )}
+          </div>
+
+          {/* Copy */}
+          <div className="lg:col-span-5 lg:order-1 space-y-6">
+            <p className="ui-eyebrow text-muted text-[0.75rem] tracking-[0.18em]">
+              Vee&apos;s Luxe Foundry · Nairobi
+            </p>
+
+            <div className="space-y-4">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.8125rem] text-ink font-medium leading-tight tracking-tight">
+                {siteConfig.homeHero.headline}
+              </h1>
+              <p className="text-base text-muted leading-relaxed max-w-lg">
+                {siteConfig.homeHero.intro}
+              </p>
+              <p className="text-sm sm:text-base text-body/90 leading-snug max-w-lg border-l-2 border-gold/50 pl-4">
+                {siteConfig.tagline}
+              </p>
+            </div>
+
+            <Link
+              href="/shop"
+              className="ui-btn bg-bottle-green text-ivory hover:bg-bottle-green-hover shadow-sm"
+            >
+              Shop the collection
+            </Link>
           </div>
         </div>
       </div>
