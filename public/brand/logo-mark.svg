@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="gold" x1="80" y1="60" x2="432" y2="452" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFE9A3"/>
+      <stop offset="0.45" stop-color="#F5C84A"/>
+      <stop offset="1" stop-color="#E0A82A"/>
+    </linearGradient>
+  </defs>
+  <!-- orbital arc -->
+  <path
+    d="M96 320c48-178 200-248 320-168"
+    stroke="url(#gold)"
+    stroke-width="22"
+    stroke-linecap="round"
+    fill="none"
+  />
+  <path
+    d="M400 128c-72 24-128 72-152 136"
+    stroke="url(#gold)"
+    stroke-width="16"
+    stroke-linecap="round"
+    fill="none"
+    opacity="0.85"
+  />
+  <!-- diamond -->
+  <path
+    d="M256 92 148 228h216L256 92Zm0 72 62 64H194l62-64Zm-86 100h172l-34 148-34-52-34 52-34-52-2-96Z"
+    stroke="url(#gold)"
+    stroke-width="14"
+    stroke-linejoin="round"
+    fill="none"
+  />
+  <path d="M256 164v96" stroke="url(#gold)" stroke-width="12" stroke-linecap="round"/>
+  <!-- sparkles -->
+  <path
+    d="M122 118 132 146 160 156 132 166 122 194 112 166 84 156 112 146Z"
+    fill="url(#gold)"
+  />
+  <path
+    d="M368 96 378 118 400 128 378 138 368 160 358 138 336 128 358 118Z"
+    fill="url(#gold)"
+  />
+  <path
+    d="M388 352 396 372 416 380 396 388 388 408 380 388 360 380 380 372Z"
+    fill="url(#gold)"
+  />
+  <circle cx="150" cy="328" r="5" fill="#F5C84A"/>
+  <circle cx="184" cy="364" r="4" fill="#F5C84A"/>
+  <circle cx="404" cy="272" r="4" fill="#F5C84A"/>
+  <circle cx="332" cy="404" r="3.5" fill="#F5C84A"/>
+</svg>
