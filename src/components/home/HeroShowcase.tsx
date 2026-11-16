@@ -63,11 +63,37 @@ export function HeroShowcase({ slides }: HeroShowcaseProps) {
         else goPrev();
       }}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-[3.75rem]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-9 lg:gap-9 items-center">
-          {/* Product visual — first in DOM so mobile shows imagery before copy */}
-          <div className="lg:col-span-7 lg:order-2 relative flex items-center justify-center min-h-[300px] sm:min-h-[390px] lg:min-h-[450px]">
-            <div className="relative w-full max-w-[420px] sm:max-w-md lg:max-w-xl mx-auto h-[min(57vh,480px)] sm:h-[min(63vh,510px)] lg:h-[450px] flex items-center justify-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-10 sm:py-12 lg:py-[3.75rem]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-9 lg:gap-9 items-center">
+          {/* Copy first on mobile; left column on lg+ */}
+          <div className="lg:col-span-5 lg:col-start-1 lg:row-start-1 space-y-5 sm:space-y-6">
+            <p className="ui-eyebrow text-muted text-[0.75rem] tracking-[0.18em]">
+              Vee&apos;s Luxe Foundry · Nairobi
+            </p>
+
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.8125rem] text-ink font-medium leading-tight tracking-tight">
+                {siteConfig.homeHero.headline}
+              </h1>
+              <p className="text-base text-muted leading-relaxed max-w-lg">
+                {siteConfig.homeHero.intro}
+              </p>
+              <p className="text-sm sm:text-base text-body/90 leading-snug max-w-lg border-l-2 border-gold/50 pl-4">
+                {siteConfig.tagline}
+              </p>
+            </div>
+
+            <Link
+              href="/shop"
+              className="ui-btn bg-bottle-green text-ivory hover:bg-bottle-green-hover shadow-sm"
+            >
+              Shop the collection
+            </Link>
+          </div>
+
+          {/* Product visual below copy on mobile; right column on lg+ */}
+          <div className="lg:col-span-7 lg:col-start-6 lg:row-start-1 relative flex items-center justify-center min-h-[240px] sm:min-h-[340px] lg:min-h-[450px]">
+            <div className="relative w-full max-w-[420px] sm:max-w-md lg:max-w-xl mx-auto h-[min(46vh,380px)] sm:h-[min(56vh,460px)] lg:h-[450px] flex items-center justify-center">
               {slides.map((slide, i) => (
                 <div
                   key={slide.slug}
@@ -93,47 +119,21 @@ export function HeroShowcase({ slides }: HeroShowcaseProps) {
                 <button
                   type="button"
                   onClick={goPrev}
-                  className="absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-14 h-14 border border-sand/80 bg-white text-ink shadow-sm hover:border-bottle-green hover:text-bottle-green flex items-center justify-center transition-colors"
+                  className="absolute left-0 sm:left-2 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-14 sm:h-14 border border-sand/80 bg-white text-ink shadow-sm hover:border-bottle-green hover:text-bottle-green flex items-center justify-center transition-colors"
                   aria-label="Previous fragrance"
                 >
-                  <ChevronLeft className="w-7 h-7" strokeWidth={1.5} />
+                  <ChevronLeft className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={1.5} />
                 </button>
                 <button
                   type="button"
                   onClick={goNext}
-                  className="absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-14 h-14 border border-sand/80 bg-white text-ink shadow-sm hover:border-bottle-green hover:text-bottle-green flex items-center justify-center transition-colors"
+                  className="absolute right-0 sm:right-2 top-1/2 -translate-y-1/2 z-20 w-11 h-11 sm:w-14 sm:h-14 border border-sand/80 bg-white text-ink shadow-sm hover:border-bottle-green hover:text-bottle-green flex items-center justify-center transition-colors"
                   aria-label="Next fragrance"
                 >
-                  <ChevronRight className="w-7 h-7" strokeWidth={1.5} />
+                  <ChevronRight className="w-6 h-6 sm:w-7 sm:h-7" strokeWidth={1.5} />
                 </button>
               </>
             )}
-          </div>
-
-          {/* Copy */}
-          <div className="lg:col-span-5 lg:order-1 space-y-6">
-            <p className="ui-eyebrow text-muted text-[0.75rem] tracking-[0.18em]">
-              Vee&apos;s Luxe Foundry · Nairobi
-            </p>
-
-            <div className="space-y-4">
-              <h1 className="font-serif text-3xl sm:text-4xl lg:text-[2.8125rem] text-ink font-medium leading-tight tracking-tight">
-                {siteConfig.homeHero.headline}
-              </h1>
-              <p className="text-base text-muted leading-relaxed max-w-lg">
-                {siteConfig.homeHero.intro}
-              </p>
-              <p className="text-sm sm:text-base text-body/90 leading-snug max-w-lg border-l-2 border-gold/50 pl-4">
-                {siteConfig.tagline}
-              </p>
-            </div>
-
-            <Link
-              href="/shop"
-              className="ui-btn bg-bottle-green text-ivory hover:bg-bottle-green-hover shadow-sm"
-            >
-              Shop the collection
-            </Link>
           </div>
         </div>
       </div>
