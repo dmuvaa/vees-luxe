@@ -63,12 +63,6 @@ export function Navbar() {
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
             </button>
-            <Link
-              href="/checkout"
-              className="hidden md:inline-flex ui-btn bg-bottle-green text-ivory hover:bg-bottle-green-hover transition-colors"
-            >
-              Checkout
-            </Link>
           </div>
         </div>
 

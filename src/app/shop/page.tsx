@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import { Suspense } from "react";
 import { productRepository } from "@/lib/data/products";
 import { categoryRepository } from "@/lib/data/categories";
@@ -7,7 +8,7 @@ import { ShopContainer } from "@/components/shop/ShopContainer";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Shop Luxury Fragrances Nairobi | Vee's Luxe Foundry",
+  title: pageTitle("Shop Luxury Fragrances Nairobi | Vee's Luxe Foundry"),
   description: "Browse authentic Arabic perfumes, designer fragrances, and luxury body mists in Nairobi Kenya. Filter by brand, scent notes, and price with WhatsApp ordering.",
 };
 

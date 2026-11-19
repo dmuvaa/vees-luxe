@@ -2,12 +2,12 @@ import { Metadata } from "next";
 import { getFAQs } from "@/lib/data/content";
 import { FAQAccordion } from "@/components/faq/FAQAccordion";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
-import { generateFAQJsonLd } from "@/lib/seo";
+import { generateFAQJsonLd, pageTitle } from "@/lib/seo";
 import { getConciergeWhatsAppUrl } from "@/lib/whatsapp";
 import { MessageCircle } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Frequently Asked Questions | Vee's Luxe Foundry Kenya",
+  title: pageTitle("Frequently Asked Questions | Vee's Luxe Foundry Kenya"),
   description: "Find clear answers on ordering Arabic perfumes via WhatsApp, M-Pesa payments, genuine Dubai batch codes, and same-day delivery in Nairobi.",
 };
 

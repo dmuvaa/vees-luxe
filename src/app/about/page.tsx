@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Image from "next/image";
 import Link from "next/link";
 import { getConciergeWhatsAppUrl } from "@/lib/whatsapp";
@@ -6,7 +7,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Sparkles, MessageCircle, ArrowRight, ShieldCheck, Award, Heart } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | Vee's Luxe Foundry Nairobi",
+  title: pageTitle("About Us | Vee's Luxe Foundry Nairobi"),
   description: "Learn about Vee's Luxe Foundry, Virginia's vision, and our commitment to bringing authentic luxury Arabic perfumes and designer scents to Nairobi, Kenya.",
 };
 

@@ -1,9 +1,10 @@
 import { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Vee's Luxe Foundry Kenya",
+  title: pageTitle("Privacy Policy | Vee's Luxe Foundry Kenya"),
   description: "Privacy and data protection policy for Vee's Luxe Foundry in accordance with the Kenya Data Protection Act, 2019.",
 };
 

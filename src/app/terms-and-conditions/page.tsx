@@ -1,8 +1,9 @@
 import { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Vee's Luxe Foundry Kenya",
+  title: pageTitle("Terms and Conditions | Vee's Luxe Foundry Kenya"),
   description: "Terms of service and ordering conditions for Vee's Luxe Foundry in Nairobi, Kenya.",
 };
 

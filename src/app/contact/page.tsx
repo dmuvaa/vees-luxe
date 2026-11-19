@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import { siteConfig } from "@/config/site";
 import { getConciergeWhatsAppUrl } from "@/lib/whatsapp";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
-import { generateLocalBusinessJsonLd } from "@/lib/seo";
+import { generateLocalBusinessJsonLd, pageTitle } from "@/lib/seo";
 import {
   MessageCircle,
   Mail,
@@ -14,7 +14,7 @@ import {
 import { InstagramIcon } from "@/components/shared/Icons";
 
 export const metadata: Metadata = {
-  title: "Contact Concierge | Vee's Luxe Foundry Nairobi",
+  title: pageTitle("Contact Concierge | Vee's Luxe Foundry Nairobi"),
   description: "Connect with Vee's Luxe Foundry via WhatsApp or Instagram. Nairobi delivery, custom fragrance recommendations, and order status updates.",
 };
 

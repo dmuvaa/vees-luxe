@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import { Suspense } from "react";
 import { notFound } from "next/navigation";
 import { categoryRepository } from "@/lib/data/categories";
@@ -27,7 +28,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   }
 
   return {
-    title: category.seo.title,
+    title: pageTitle(category.seo.title),
     description: category.seo.description,
     openGraph: {
       title: category.seo.title,
