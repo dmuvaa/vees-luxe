@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,7 +27,7 @@ export async function generateMetadata({ params }: ArticlePageProps): Promise<Me
   }
 
   return {
-    title: article.seo.title,
+    title: pageTitle(article.seo.title),
     description: article.seo.description,
     openGraph: {
       title: article.seo.title,

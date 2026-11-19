@@ -8,7 +8,7 @@ import { ProductOrderActions } from "@/components/products/ProductOrderActions";
 import { ProductCard } from "@/components/products/ProductCard";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { formatPrice } from "@/lib/utils";
-import { generateProductJsonLd } from "@/lib/seo";
+import { generateProductJsonLd, pageTitle } from "@/lib/seo";
 import { brandPageHref } from "@/lib/brand-url";
 import {
   Sparkles,
@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
   }
 
   return {
-    title: product.seo.title,
+    title: pageTitle(product.seo.title),
     description: product.seo.description,
     openGraph: {
       title: product.seo.title,
@@ -83,7 +83,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
           {/* Product Primary Grid (Gallery + Core Details) */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Column: Gallery (5 cols) */}
-            <div className="lg:col-span-6 sticky top-28">
+            <div className="lg:col-span-6 lg:sticky lg:top-28 lg:self-start">
               <ProductGallery images={product.images} productName={product.name} />
             </div>
 

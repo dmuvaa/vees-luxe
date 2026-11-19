@@ -125,3 +125,11 @@ export function generateFAQJsonLd(faqs: FAQItem[]) {
     })),
   };
 }
+
+/**
+ * Page titles that already carry the brand name bypass the root
+ * "%s | Vee's Luxe Foundry" template so the suffix isn't doubled.
+ */
+export function pageTitle(title: string): string | { absolute: string } {
+  return /vee['’]s luxe/i.test(title) ? { absolute: title } : title;
+}

@@ -3,6 +3,7 @@ import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { MotionDirector } from "@/components/motion/MotionDirector";
 import { AppProviders } from "@/components/providers/app-providers";
 import { siteConfig } from "@/config/site";
 import { generateOrganizationJsonLd } from "@/lib/seo";
@@ -57,6 +58,7 @@ export default function RootLayout({
       </head>
       <body className="min-h-screen flex flex-col bg-ivory text-body antialiased">
         <AppProviders>
+          <MotionDirector />
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />

@@ -1,10 +1,11 @@
 import { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { getConciergeWhatsAppUrl } from "@/lib/whatsapp";
 import { Truck, ShieldCheck, RefreshCw, MessageCircle, Clock, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Delivery & Returns Policy | Vee's Luxe Foundry Kenya",
+  title: pageTitle("Delivery & Returns Policy | Vee's Luxe Foundry Kenya"),
   description: "Learn about Nairobi same-day perfume delivery, countrywide courier shipping in Kenya, M-Pesa payment options, and return conditions at Vee's Luxe Foundry.",
 };
 

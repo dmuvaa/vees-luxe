@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import Link from "next/link";
 import Image from "next/image";
 import { getArticles } from "@/lib/data/content";
@@ -6,7 +7,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import { Sparkles, ArrowRight, Clock } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "The Fragrance Journal | Perfume Guides in Kenya | Vee's Luxe Foundry",
+  title: pageTitle("The Fragrance Journal | Perfume Guides in Kenya | Vee's Luxe Foundry"),
   description: "Explore expert fragrance buying guides, perfume reviews, Arabian scent layering tips, and longevity insights from Vee's Luxe Foundry in Nairobi.",
 };
 

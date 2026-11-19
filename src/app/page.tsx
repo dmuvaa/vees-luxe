@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
+import { pageTitle } from "@/lib/seo";
 import { productRepository } from "@/lib/data/products";
 import { Hero } from "@/components/home/Hero";
 import { buildHeroEditorialSlides } from "@/data/hero-slides";
 import { TrustStrip } from "@/components/home/TrustStrip";
+import { HouseMarquee } from "@/components/home/HouseMarquee";
 import { CategoryCards } from "@/components/home/CategoryCards";
 import { FeaturedProducts } from "@/components/home/FeaturedProducts";
 import { ArabicPerfumesFeature } from "@/components/home/ArabicPerfumesFeature";
@@ -26,7 +28,7 @@ import { FinalConversion } from "@/components/home/FinalConversion";
 import { NewsletterSection } from "@/components/home/NewsletterSection";
 
 export const metadata: Metadata = {
-  title: "Luxury Arabic & Designer Perfumes in Kenya | Vee's Luxe Foundry",
+  title: pageTitle("Luxury Arabic & Designer Perfumes in Kenya | Vee's Luxe Foundry"),
   description:
     "Discover luxury Arabic perfumes, designer fragrances and Bath & Body Works favourites at Vee's Luxe Foundry. Shop premium scents in Nairobi, Kenya.",
   openGraph: {
@@ -57,6 +59,7 @@ export default async function HomePage() {
     <div className="space-y-0">
       <Hero slides={heroSlides} />
       <TrustStrip />
+      <HouseMarquee />
       <CategoryCards />
       <FeaturedProducts products={featuredForHome} />
       <ArabicPerfumesFeature />
